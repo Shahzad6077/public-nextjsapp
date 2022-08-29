@@ -1,0 +1,90 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
+  @apply w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1120px]   mx-auto px-4;
+}
+
+.title {
+  @apply font-bold text-2xl md:text-5xl;
+}
+.active-link {
+  @apply text-appOrange md:border-b border-appOrange;
+}
+
+.res-img {
+  height: unset !important;
+  object-fit: contain !important;
+}
+
+.title-bottom-line {
+  position: relative;
+}
+.title-bottom-line::after {
+  @apply bg-appOrange;
+  content: " ";
+  position: absolute;
+  height: 3px;
+  width: 2rem;
+  bottom: -25%;
+}
+.left-line::after {
+  left: 0;
+}
+.center-line::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.followSvg {
+  filter: invert(79%) sepia(11%) saturate(4862%) hue-rotate(327deg)
+    brightness(103%) contrast(92%);
+}
+.followSvg:hover {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(149deg)
+    brightness(115%) contrast(115%);
+}
+.featureSvg {
+  filter: invert(79%) sepia(11%) saturate(4862%) hue-rotate(327deg)
+    brightness(103%) contrast(92%);
+}
+.slick-track {
+  display: flex !important;
+  gap: 40px;
+}
+.connectedTop {
+  background-color: #f3f2f2;
+  height: 60px;
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
+  transform-origin: right;
+  -webkit-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+  transform: skewY(-2deg);
+}
+.connected {
+  background-color: #f3f2f2;
+  /* height: 600px; */
+  text-align: center;
+  @apply flex flex-col items-center gap-10 h-[550px] mb-6;
+}
+.titleComponent {
+  @apply text-appblack100 text-4xl text-center font-semibold;
+}
